@@ -3,9 +3,9 @@ Title: Home
 Description: This is our index page.
 ---
 
-Home page
-==========================
+Välkommen till min portfolio!
+=============================
 
-The source for this page is in `content/index.md`.
+![Bild på mig](./assets/img/me.jpeg) {.picture}
 
-This is a sample home page written in markdown with some frontmatter defined.
+**Jag heter David och är 30 år gammal.** Jag bor i Sundsvall och studerar Webbprogrammering på distans vid Blekinge Tekniska Högskola. Jag har tidigare läst ett år på Programvaruteknik vid Mittuniversitetet. Innan det läste jag tekniskt basår (även det på Miun). Min ambition är att arbeta med programmering i framtiden. När jag inte studerar gillar jag att träna, läsa böcker och spela musik.
