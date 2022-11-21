@@ -1,0 +1,130 @@
+// Module imports
+@import '../../node_modules/normalize.css/normalize';
+@import 'variables';
+@import 'blockquotes';
+@import 'code';
+@import 'mobile-menu';
+
+@import '../../shared/fontawesome/scss/fontawesome';
+$fa-font-path: '../../shared/fontawesome/webfonts';
+@import '../../shared/fontawesome/scss/brands';
+@import '../../shared/fontawesome/scss/solid';
+@import '../../shared/fontawesome/scss/regular';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+// Basic styling
+body {
+    background-color: $background-color;
+}
+
+* {
+    display: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+// Styling the header section
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $background-alternative-color;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.title-container {
+    display: flex;
+    width: auto;
+}
+
+.logo img {
+    width: 12em;
+    padding: 2em;
+}
+
+.title a {
+    color: $font-alternative-color;
+    text-decoration: none;
+}
+
+.nav {
+    background-color: $background-navigation-color;
+    padding: 1em;
+    width: auto;
+}
+
+.nav-toggle {
+    padding-right: 2em;
+}
+
+.fa.fa-bars,
+.fa.fa-times {
+    padding: 1em;
+    color: $font-alternative-color;
+}
+
+.nav a {
+    color: $font-alternative-color;
+    text-decoration: none;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+// Styling the main section
+.main {
+    max-width: 800px;
+    padding: 2em;
+    margin: 0 auto;
+    color: $font-color;
+}
+
+.main img {
+    width: 100%;
+}
+
+// Styling the footer section
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    background-color: $background-alternative-color;
+    color: $font-alternative-color;
+}
+
+.social {
+    display: flex;
+}
+
+.fab.fa-github,
+.fa.fa-envelope {
+    margin-left: 1em;
+    color: $font-alternative-color;
+    font-size: 3em;
+}
+
+// Responsive design
+@media (max-width: 500px) {
+    .logo img {
+        display: none;
+    }
+    
+    .title {
+        margin-left: 2em;
+    }
+
+    .social {
+        flex-direction: column;
+    }
+}
