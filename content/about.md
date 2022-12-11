@@ -1,9 +1,9 @@
 ---
 Title: About
-Description: En sida om kursen Design
+Description: Om kursen Design
 ---
 
-Om kursen design
+Om kursen Design
 ================
 
 ![Bild på ett ritblock](./assets/img/design.jpg) {.picture}

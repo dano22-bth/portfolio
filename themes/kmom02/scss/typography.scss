@@ -1,0 +1,45 @@
+/* Typography */
+
+@import '../../shared/fontawesome/scss/fontawesome';
+$fa-font-path: '../../shared/fontawesome/webfonts';
+@import '../../shared/fontawesome/scss/brands';
+@import '../../shared/fontawesome/scss/solid';
+@import '../../shared/fontawesome/scss/regular';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.45;
+    color: #444;
+}
+
+p,
+td,
+th,
+li,
+dd {
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin-bottom: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+}
+
+.main p {
+    margin-bottom: 1rem;
+}

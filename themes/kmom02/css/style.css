@@ -1,4 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Module imports */ /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -308,95 +308,7 @@ template {
   display: none;
 }
 
-blockquote {
-  font-style: italic;
-  margin-left: 1em;
-  padding-left: 1em;
-  border-left: 0.5em solid #f5f5f5;
-}
-
-code {
-  margin: 0 0.1em;
-  padding: 0.1em 0.2em;
-  border: 1px solid #ccc;
-  border-radius: 0.3em;
-  background: #f5f5f5;
-  font-family: monospace;
-  font-size: 0.85rem;
-  line-height: 1.9824;
-}
-
-pre {
-  padding: 0 1em;
-  border: 1px solid #ccc;
-  border-radius: 0.3em;
-  background: #f5f5f5;
-}
-
-pre code {
-  display: block;
-  margin: 0;
-  padding: 1.1111em 0;
-  border: 0 none;
-  background: transparent;
-  overflow-x: auto;
-  line-height: 1.4;
-}
-
-.slide {
-  overflow-y: hidden !important;
-  transition: height 0.5s ease-in !important;
-}
-
-.nav ul {
-  display: flex;
-  justify-content: flex-end;
-  padding: 1em 0;
-  list-style: none;
-}
-
-.nav ul li {
-  padding: 0 1em;
-}
-
-.nav a,
-.nav-toggle {
-  color: #333;
-}
-
-.nav-toggle {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .header {
-    flex-direction: column;
-  }
-  .nav ul {
-    flex-direction: column;
-    padding-bottom: 1em;
-  }
-  .nav ul li {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  .nav ul li a {
-    display: block;
-    padding: 0.5em 0;
-  }
-  .js .nav-toggle {
-    display: block;
-    float: right;
-    width: 2em;
-    margin: 0.6667em 0;
-    font-size: 1.5rem;
-    line-height: 2em;
-    text-align: center;
-    cursor: pointer;
-  }
-}
-/*!
+/* Variables */ /* Typography */ /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
@@ -6511,12 +6423,20 @@ readers do not read off random characters that represent icons */
 }
 
 body {
-  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.45;
+  color: #444;
 }
 
-* {
-  display: border-box;
-  font-family: "Roboto", sans-serif;
+p,
+td,
+th,
+li,
+dd {
+  text-align: justify;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  margin-bottom: 0.5rem;
 }
 
 h1,
@@ -6526,8 +6446,70 @@ h4,
 h5,
 h6 {
   font-family: "Open Sans", sans-serif;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
+img {
+  max-width: 100%;
+}
+
+.main p {
+  margin-bottom: 1rem;
+}
+
+/* Blockquote */
+blockquote {
+  font-style: italic;
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 0.5em solid #f5f5f5;
+}
+
+/* Code */
+code {
+  margin: 0 0.1em;
+  padding: 0.1em 0.2em;
+  border: 1px solid #ccc;
+  border-radius: 0.3em;
+  background: #f5f5f5;
+  font-family: monospace;
+  font-size: 1.25rem;
+  line-height: 1.9824;
+}
+
+pre {
+  max-width: fit-content;
+  padding: 0 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.3em;
+  background: #f5f5f5;
+}
+
+pre code {
+  display: block;
+  margin: 0;
+  padding: 1.1111em 0;
+  border: 0 none;
+  background: transparent;
+  overflow-x: scroll;
+  line-height: 1.4;
+}
+
+/* Basic styling */
+body {
+  background-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Styling the header section */
 .header {
   display: flex;
   justify-content: space-between;
@@ -6541,12 +6523,24 @@ h6 {
 
 .title-container {
   display: flex;
-  width: auto;
+  align-items: center;
+  margin: 0 1rem;
+  margin-bottom: 1rem;
 }
 
 .logo img {
-  width: 12em;
-  padding: 2em;
+  width: 12rem;
+  margin: 1rem 1rem 0 0.5rem;
+}
+
+.title {
+  margin-top: 0.5rem;
+}
+.title h1 {
+  margin: 0;
+}
+.title p {
+  margin: 0;
 }
 
 .title a {
@@ -6554,44 +6548,57 @@ h6 {
   text-decoration: none;
 }
 
+/* Stylng navigation */
 .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #000;
-  padding: 1em;
-  width: auto;
+}
+
+.nav ul {
+  padding: 0 1rem;
+  margin: 0;
+}
+.nav ul li {
+  margin: 0;
 }
 
 .nav-toggle {
-  padding-right: 2em;
+  padding: 0;
+  margin: 1.25rem 0.25rem 1.25rem 0.5rem !important;
 }
 
 .fa.fa-bars,
 .fa.fa-times {
-  padding: 1em;
   color: #fff;
 }
 
 .nav a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
+.active a {
+  color: #ffb347 !important;
+}
+
+/* Styling the main section */
 .main {
   max-width: 800px;
-  padding: 2em;
+  min-height: calc(100vh - 205px);
+  padding: 1rem 2rem;
   margin: 0 auto;
   color: #111;
 }
 
-.main img {
-  width: 100%;
-}
-
+/* Styling the footer section */
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 2em;
+  padding: 2rem;
   background-color: #333;
   color: #fff;
 }
@@ -6602,19 +6609,142 @@ h6 {
 
 .fab.fa-github,
 .fa.fa-envelope {
-  margin-left: 1em;
+  margin-left: 2rem;
   color: #fff;
-  font-size: 3em;
+  font-size: 3rem;
 }
 
-@media (max-width: 500px) {
+/* Import report page layout */
+/* Styling the report page */
+.landingpage {
+  display: grid;
+  gap: 1rem 1rem;
+}
+.landingpage h1 {
+  grid-column: span 3;
+  justify-self: center;
+}
+
+.kmom-box.project {
+  grid-column: span 3;
+}
+
+/* Import technologies layout */
+/* Styling the technologies page */
+.landingpage {
+  display: grid;
+  gap: 1rem 1rem;
+  margin-bottom: 1rem;
+}
+.landingpage h1 {
+  grid-column: span 3;
+  justify-self: center;
+}
+
+.tech-box {
+  text-align: center;
+}
+.tech-box a {
+  display: block;
+  padding: 2rem;
+  text-decoration: none;
+  font-size: larger;
+  font-weight: bold;
+  color: #111;
+}
+.tech-box:hover {
+  transform: scale(1.03);
+}
+.tech-box.css {
+  grid-column: span 1;
+  background-color: #ffb3ba;
+}
+.tech-box.html {
+  grid-column: span 2;
+  background-color: #ffdfba;
+}
+.tech-box.javascript {
+  grid-column: span 2;
+  background-color: #ffffba;
+}
+.tech-box.php {
+  grid-column: span 1;
+  background-color: #baffc9;
+}
+.tech-box.python {
+  grid-column: span 3;
+  background-color: #bae1ff;
+}
+.tech-box.git {
+  grid-column: span 1;
+  background-color: #e0d6ff;
+}
+.tech-box.sqlite {
+  grid-column: span 2;
+  background-color: #d0b6d5;
+}
+
+/* Import technology layout */
+/* Styling the technology pages */
+.two-col-container {
+  display: flex;
+  justify-content: space-between;
+}
+.two-col-container .column-one {
+  width: 25%;
+  padding: 0.25rem 0;
+}
+.two-col-container .column-one ul {
+  padding: 0;
+  list-style: none;
+}
+.two-col-container .column-one li {
+  padding: 0.25rem 0;
+}
+.two-col-container .column-one a {
+  display: block;
+  text-decoration: none;
+  font-size: larger;
+  font-weight: bold;
+  color: #111;
+}
+.two-col-container .column-one a:hover {
+  transform: scale(1.03);
+}
+.two-col-container .column-two {
+  width: 75%;
+  overflow: hidden;
+}
+
+/* Import respovsive styling */
+/* Responsive design */
+@media (max-width: 860px) {
   .logo img {
     display: none;
   }
-  .title {
-    margin-left: 2em;
-  }
+}
+@media (max-width: 500px) {
   .social {
     flex-direction: column;
+    row-gap: 0.5rem;
+  }
+  .landingpage {
+    display: block;
+    text-align: center;
+  }
+  .landingpage h1 {
+    margin-bottom: 2rem;
+  }
+  .tech-box {
+    margin-top: 1rem;
+  }
+  .two-col-container {
+    flex-direction: column;
+  }
+  .two-col-container .column-one {
+    display: none;
+  }
+  .two-col-container .column-two {
+    width: 100%;
   }
 }

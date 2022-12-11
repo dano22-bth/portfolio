@@ -1,0 +1,39 @@
+/* Responsive design */
+
+@media (max-width: 860px) {
+    .logo img {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .social {
+        flex-direction: column;
+        row-gap: 0.5rem;
+    }
+
+    .landingpage {
+        display: block;
+        text-align: center;
+
+        h1 {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .tech-box {
+        margin-top: 1rem;
+    }
+
+    .two-col-container {
+        flex-direction: column;
+
+        .column-one {
+            display: none;
+        }
+
+        .column-two {
+            width: 100%;
+        }
+    }
+}

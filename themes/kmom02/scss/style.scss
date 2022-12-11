@@ -1,38 +1,25 @@
-// Module imports
+/* Module imports */
 @import '../../node_modules/normalize.css/normalize';
+
 @import 'variables';
-@import 'blockquotes';
+@import 'typography';
+@import 'blockquote';
 @import 'code';
-@import 'mobile-menu';
 
-@import '../../shared/fontawesome/scss/fontawesome';
-$fa-font-path: '../../shared/fontawesome/webfonts';
-@import '../../shared/fontawesome/scss/brands';
-@import '../../shared/fontawesome/scss/solid';
-@import '../../shared/fontawesome/scss/regular';
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
-
-// Basic styling
+/* Basic styling */
 body {
     background-color: $background-color;
 }
 
 * {
-    display: border-box;
-    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Open Sans', sans-serif;
+.hidden {
+    display: none !important;
 }
 
-// Styling the header section
+/* Styling the header section */
 .header {
     display: flex;
     justify-content: space-between;
@@ -46,12 +33,26 @@ h6 {
 
 .title-container {
     display: flex;
-    width: auto;
+    align-items: center;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
 }
 
 .logo img {
-    width: 12em;
-    padding: 2em;
+    width: 12rem;
+    margin: 1rem 1rem 0 0.5rem;
+}
+
+.title {
+    margin-top: 0.5rem;
+    
+    h1 {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
 }
 
 .title a {
@@ -59,46 +60,59 @@ h6 {
     text-decoration: none;
 }
 
+/* Stylng navigation */
+
 .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: $background-navigation-color;
-    padding: 1em;
-    width: auto;
+}
+
+.nav ul {
+    padding: 0 1rem;
+    margin: 0;
+
+    li {
+        margin: 0;
+    }
 }
 
 .nav-toggle {
-    padding-right: 2em;
+    padding: 0;
+    margin: 1.25rem 0.25rem 1.25rem 0.5rem !important;
 }
 
 .fa.fa-bars,
 .fa.fa-times {
-    padding: 1em;
     color: $font-alternative-color;
 }
 
 .nav a {
     color: $font-alternative-color;
     text-decoration: none;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-weight: bold;
 }
 
-// Styling the main section
+.active a {
+    color: #ffb347 !important;
+}
+
+/* Styling the main section */
 .main {
     max-width: 800px;
-    padding: 2em;
+    min-height: calc(100vh - 205px);
+    padding: 1rem 2rem;
     margin: 0 auto;
     color: $font-color;
 }
 
-.main img {
-    width: 100%;
-}
-
-// Styling the footer section
+/* Styling the footer section */
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 2em;
+    padding: 2rem;
     background-color: $background-alternative-color;
     color: $font-alternative-color;
 }
@@ -109,22 +123,19 @@ h6 {
 
 .fab.fa-github,
 .fa.fa-envelope {
-    margin-left: 1em;
+    margin-left: 2rem;
     color: $font-alternative-color;
-    font-size: 3em;
+    font-size: 3rem;
 }
 
-// Responsive design
-@media (max-width: 500px) {
-    .logo img {
-        display: none;
-    }
-    
-    .title {
-        margin-left: 2em;
-    }
+/* Import report page layout */
+@import 'report';
 
-    .social {
-        flex-direction: column;
-    }
-}
+/* Import technologies layout */
+@import 'technologies';
+
+/* Import technology layout */
+@import 'technology';
+
+/* Import respovsive styling */
+@import 'responsive';

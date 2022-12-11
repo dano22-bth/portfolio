@@ -1,0 +1,63 @@
+/* Styling the technologies page */
+.landingpage {
+    display: grid;
+    gap: 1rem 1rem;
+    margin-bottom: 1rem;
+
+    h1 {
+        grid-column: span 3;
+        justify-self: center;
+    }
+}
+
+.tech-box {
+    text-align: center;
+
+    a {
+        display: block;
+        padding: 2rem;
+        text-decoration: none;
+        font-size: larger;
+        font-weight: bold;
+        color: $font-color;
+    }
+
+    &:hover {
+        transform: scale(1.03);
+    }
+
+    &.css {
+        grid-column: span 1;
+        background-color: #ffb3ba;
+    }
+
+    &.html {
+        grid-column: span 2;
+        background-color: #ffdfba;
+    }
+
+    &.javascript {
+        grid-column: span 2;
+        background-color: #ffffba;
+    }
+
+    &.php {
+        grid-column: span 1;
+        background-color: #baffc9;
+    }
+
+    &.python {
+        grid-column: span 3;
+        background-color: #bae1ff;
+    }
+
+    &.git {
+        grid-column: span 1;
+        background-color: #e0d6ff;
+    }
+
+    &.sqlite {
+        grid-column: span 2;
+        background-color: #d0b6d5;
+    }
+}

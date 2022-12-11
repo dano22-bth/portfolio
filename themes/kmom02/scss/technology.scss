@@ -1,0 +1,36 @@
+/* Styling the technology pages */
+.two-col-container {
+    display: flex;
+    justify-content: space-between;
+
+    .column-one {
+        width: calc((100% / 16) * 4);
+        padding: 0.25rem 0;
+    }
+
+    .column-one ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    .column-one li {
+        padding: 0.25rem 0;
+    }
+
+    .column-one a {
+        display: block;
+        text-decoration: none;
+        font-size: larger;
+        font-weight: bold;
+        color: $font-color;
+    }
+
+    .column-one a:hover {
+        transform: scale(1.03);
+    }
+
+    .column-two {
+        width: calc((100% / 16) * 12);
+        overflow: hidden;
+    }
+}

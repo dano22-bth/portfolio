@@ -5,9 +5,6 @@
         </p>
     </div>
     <div class="social">
-        <a href="mailto:dano22@student.bth.se">
-            <i class="fa fa-envelope"></i>
-        </a>
         {% for social in pages["_meta"].meta.social %}
         <a href="{{ social.url }}" title="{{ social.title }}" role="button">
             <i class="{{ social.icon }}" aria-hidden="true"></i>

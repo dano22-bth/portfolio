@@ -1,0 +1,32 @@
+{% include 'incl/header.twig' %}
+
+<body>
+    {% include 'incl/nav.twig' %}
+
+    <div class="main" role="main">
+        <div class="two-col-container">
+
+            <div class="column-one">
+                <h2>Teknologier</h2>
+                <ul>
+                    <li{% if current_page.id | split('/') | last == 'css' %} class="active" {% endif %}><a href="css">CSS</a></li>
+                    <li {% if current_page.id | split('/') | last == 'git' %} class="active" {% endif %}><a href="git">Git</a></li>
+                    <li {% if current_page.id | split('/') | last == 'html' %} class="active" {% endif %}><a href="html">HTML</a></li>
+                    <li {% if current_page.id | split('/') | last == 'javascript' %} class="active" {% endif %}><a href="javascript">JavaScript</a></li>
+                    <li {% if current_page.id | split('/') | last == 'php' %} class="active" {% endif %}><a href="php">PHP</a></li>
+                    <li {% if current_page.id | split('/') | last == 'python' %} class="active" {% endif %}><a href="python">Python</a></li>
+                    <li {% if current_page.id | split('/') | last == 'sqlite' %} class="active" {% endif %}><a href="sqlite">Sqlite</a></li>
+                </ul>
+            </div>
+
+            <div class="column-two">
+                {{ content }}
+            </div>
+
+        </div>
+    </div>
+    
+    {% include 'incl/footer.twig' %}
+</body>
+
+</html>

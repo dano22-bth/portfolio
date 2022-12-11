@@ -1,6 +1,6 @@
 ---
 Title: Home
-Description: This is our index page.
+Description: Välkommen till min portfolio!
 ---
 
 Välkommen till min portfolio!
