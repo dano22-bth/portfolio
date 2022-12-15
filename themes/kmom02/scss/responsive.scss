@@ -13,16 +13,12 @@
     }
 
     .landingpage {
-        display: block;
-        text-align: center;
+        grid-template-columns: 1fr;
 
-        h1 {
-            margin-bottom: 2rem;
+        h1,
+        .tech-box {
+            grid-column: span 1;
         }
-    }
-
-    .tech-box {
-        margin-top: 1rem;
     }
 
     .two-col-container {

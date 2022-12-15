@@ -2,6 +2,7 @@
 .two-col-container {
     display: flex;
     justify-content: space-between;
+    column-gap: 2rem;
 
     .column-one {
         width: calc((100% / 16) * 4);

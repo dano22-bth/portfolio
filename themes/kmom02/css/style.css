@@ -6633,6 +6633,7 @@ body {
 /* Styling the technologies page */
 .landingpage {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem 1rem;
   margin-bottom: 1rem;
 }
@@ -6689,6 +6690,7 @@ body {
 .two-col-container {
   display: flex;
   justify-content: space-between;
+  column-gap: 2rem;
 }
 .two-col-container .column-one {
   width: 25%;
@@ -6729,14 +6731,11 @@ body {
     row-gap: 0.5rem;
   }
   .landingpage {
-    display: block;
-    text-align: center;
+    grid-template-columns: 1fr;
   }
-  .landingpage h1 {
-    margin-bottom: 2rem;
-  }
-  .tech-box {
-    margin-top: 1rem;
+  .landingpage h1,
+  .landingpage .tech-box {
+    grid-column: span 1;
   }
   .two-col-container {
     flex-direction: column;
